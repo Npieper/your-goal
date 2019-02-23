@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+</head>
+
+<body>
+
+  <form action="/expense" method="post">
+    Species:
+    <input type="text" name="name">
+    <br/> Description:
+    <input type="text" name="price">
+    <br/>
+    <input type="submit">
+
+  </form>
+
+  <tbody>
+      
+    {{range $i, $e := .Expense}}
+        
+      <tr>
+             
+          <td>
+            <p>{{.Name}} {{.Price}}</p>
+        
+      
+          </td>      
+        </tr>
+                {{end}}
+              </tr>
+              </tbody> 
+
+              <p>{{.MonthlyExpenses}}</p>
+               
+
+</body>
